@@ -1,0 +1,19 @@
+n = 5
+ch = 96 + n
+for i in range(2*n):
+    for j in range(n):
+        if j < n-i-1:
+            print("--",end="")
+        else:
+            print(chr(ch),end="-")
+            ch = ch -1
+    ch = 96 + n
+    # print("\r")
+    for j in range(n,2*n):
+        if j > n-i-1:
+            print("--",end="")
+        else:
+            print(chr(ch),end="-")
+            ch = ch -1
+    ch = 96 + n
+    print("\r")
